@@ -1,0 +1,176 @@
+/* Impostazioni generali */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#search {
+    width: 40%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #fff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
+}
+
+/* Bottoni */
+button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.7);
+}
+
+/* Modalità Dark */
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+body.dark-mode button {
+    background-color: #2980b9;
+}
+
+body.dark-mode button:hover {
+    background-color: #1f6f8b;
+}
+
+body.dark-mode #search {
+    background-color: rgba(44, 62, 80, 0.8);
+    color: white;
+}
+
+body.dark-mode #search:focus {
+    background-color: #34495e;
+    border-color: #1abc9c;
+}
+
+/* Sezioni */
+section {
+    margin: 30px 10%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3498db;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* Sezione Personaggi */
+#characters-list {
+    padding-left: 0;
+}
+
+.character {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.character:hover {
+    background-color: #d5dbdb;
+    transform: scale(1.05);
+}
+
+.character:active {
+    background-color: #bdc3c7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    .techniques-image {
+        max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+        height: auto; /* Mantiene le proporzioni dell'immagine */
+        display: block; /* Rende l'immagine un blocco per centrarla */
+        margin: 20px auto; /* Aggiunge margini per distanziare l'immagine dal testo */
+    }
+}
