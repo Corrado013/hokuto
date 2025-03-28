@@ -1,12 +1,13 @@
 /* Importiamo un font epico */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
 /* Reset base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif, 'Teko';
 }
 
 body {
@@ -24,7 +25,8 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-family: 'Teko';
+    font-size: 4em;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
 }
@@ -68,7 +70,17 @@ section {
 h2 {
     font-size: 2em;
     text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    text-align: center;
 }
+
+.left-text {
+    text-align: left;
+}
+
+.left-text {
+    text-align: left;
+}
+
 
 /* Miglioriamo la visualizzazione dei personaggi e tecniche */
 #characters-list, #techniques-list {
@@ -101,4 +113,14 @@ h2 {
 
 .animated-text {
     animation: glow 2s infinite alternate;
+}
+
+.respirations-image {
+    width: 20%;  /* Imposta la larghezza dell'immagine al 50% della larghezza del contenitore */
+    height: 20%;  /* Mantiene le proporzioni originali dell'immagine */
+}
+
+.techniques-image {
+    width: 20%;  /* Imposta la larghezza dell'immagine al 50% della larghezza del contenitore */
+    height: 20%;  /* Mantiene le proporzioni originali dell'immagine */
 }
