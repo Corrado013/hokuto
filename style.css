@@ -127,11 +127,3 @@ h1 {
     width: 20%;  /* Imposta la larghezza dell'immagine al 50% della larghezza del contenitore */
     height: 20%;  /* Mantiene le proporzioni originali dell'immagine */
 }
-
-.paragrafo-grande {
-    font-size: 1.8em;
-    font-weight: bold;
-    text-align: justify;
-    line-height: 1.6;
-    margin-top: 15px;
-}
