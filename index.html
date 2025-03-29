@@ -7,23 +7,59 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1>Enciclopedia di Hokuto</h1>
-        <input type="text" id="search" placeholder="Cerca un personaggio o una tecnica..." oninput="searchFunction()">
-    </header>
-    <main>
-        <section id="characters">
-            <h2>Personaggi</h2>
-            <ul id="characters-list">
-                <li class="character">Ken</li>
-                <li class="character">Raoul</li>
-                <li class="character">Toki</li>
-                <li class="character">Jagi</li>
-                <li class="character">Mamiya</li>
-                <!-- Altri personaggi dell'anime -->
-            </ul>
-        </section>
+    <style>
+        #character-info {
+            display: none; /* Nasconde inizialmente la sezione */
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Personaggi</h2>
+    <ul id="characters-list">
+        <li class="character" data-name="ken">Ken</li>
+        <li class="character" data-name="raoul">Raoul</li>
+        <li class="character" data-name="toki">Toki</li>
+        <li class="character" data-name="jagi">Jagi</li>
+        <li class="character" data-name="mamiya">Mamiya</li>
+    </ul>
 
+    <div id="character-info">
+        <h3 id="character-name"></h3>
+        <p id="character-story"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dizionario delle storie
+            const stories = {
+                ken: "Ken il Guerriero è l'erede della Divina Scuola di Hokuto...",
+                raoul: "Raoul, noto come il Re di Hokuto, è il fratello maggiore di Ken...",
+                toki: "Toki, fratello di Ken e Raoul, ha scelto di usare le tecniche di Hokuto per curare...",
+                jagi: "Jagi è il fratello caduto di Hokuto, accecato dall'invidia verso Ken...",
+                mamiya: "Mamiya è una guerriera forte e coraggiosa che lotta per proteggere il suo villaggio..."
+            };
+
+            // Seleziona gli elementi
+            const characters = document.querySelectorAll(".character");
+            const characterInfo = document.getElementById("character-info");
+            const characterName = document.getElementById("character-name");
+            const characterStory = document.getElementById("character-story");
+
+            // Aggiunge l'evento click a ogni personaggio
+            characters.forEach(character => {
+                character.addEventListener("click", function () {
+                    const name = this.dataset.name; // Prende il nome dal data-name
+                    characterName.textContent = this.textContent; // Mostra il nome
+                    characterStory.textContent = stories[name] || "Storia non disponibile."; // Mostra la storia
+                    characterInfo.style.display = "block"; // Mostra il div info
+                });
+            });
+        });
+    </script>
+    
         <section id="animal-techniques">
             <h2>Tecniche degli Animali</h2>
             <p>Ogni animale ha le sue sette tecniche speciali. Ecco alcune delle tecniche più famose:</p>
@@ -37,7 +73,7 @@
 
         <section id="respirations">
             <h2 class="left-text">Respirazioni</h2>
-            <img src="./respirazioni.jpg" alt="Rappresentazione delle Respirazioni" class="respirations-image" style="float: right; margin-left: 10px; margin-top: -100px;">
+            <img src="img/respirazioni.jpg" alt="Rappresentazione delle Respirazioni" class="respirations-image" style="float: right; margin-left: 10px; margin-top: -100px;">
             <p>Le respirazioni sono suddivise in tre livelli:</p>
             <ul>
                 <li><strong>Livello A</strong>: Respirazione del Fuoco (la più potente)</li>
@@ -101,7 +137,7 @@
 
         <section id="legendary-techniques">
             <h2>Tecniche Leggendarie</h2>
-            <img src="./tecniche.jpg" alt="Rappresentazione delle Tecniche" class="techniques-image" style="float: right; margin-left: 10px; margin-top: -75px;"> 
+            <img src="img/tecniche.jpg" alt="Rappresentazione delle Tecniche" class="techniques-image" style="float: right; margin-left: 10px; margin-top: -75px;"> 
             <p>
                 Questa immagine rappresenta le diverse tecniche marziali. 
                 Il colore indica la tipologia della tecnica:
